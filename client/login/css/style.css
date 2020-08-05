@@ -1,0 +1,208 @@
+/* css reset  --start */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* css reset  --end */
+
+
+/* root component, used for layout  --start */
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+/* root component, used for layout  --end */
+
+
+/* basic components, used for layout and animation  --start */
+.form {
+    position: relative;
+    height: 300px;
+    width: 450px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #ebeef5;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .3);
+}
+
+.form-title {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    /* background-color: red; */
+}
+.form-title-item {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.form-title-item span {
+    height: 16px;
+    width: 40px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    line-height: 16px;
+    transition: all .3s ease;
+}
+.item-unchoose:hover {
+    color: white;
+    font-weight: 600;
+    background-color: rgba(66, 185, 131, .5);
+}
+.form-title-item span::after {
+    position: absolute;
+    display: block;
+    content: ' ';
+    background-color: rgba(66, 185, 131, .3);
+    height: 2px;
+    width: 100%;
+    bottom: 0px;
+}
+.form-title-choose {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgba(66, 185, 131, .5);
+}
+
+.form-box {
+    position: relative;
+    height: 250px;
+    width: 900px;
+    box-sizing: border-box;
+}
+
+.form-item {
+    position: relative;
+    height: 100%;
+    width: 450px;
+    float: left;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+}
+.form-item-transform {
+    transform: translate(-100%, 0);
+}
+
+.form-input-box {
+    margin: 30px 0;
+    height: 55px;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input {
+    position: relative;
+    height: 35px;
+    width: 80%;
+}
+
+.input {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    /* padding: 0px 44%; */
+    font-size: 18px;
+    transition: all .3s ease;
+    caret-color: rgba(66, 185, 131, 1);
+
+}
+.input::placeholder {
+    color:rgba(66, 185, 131, .5);
+    font-size: 14px;
+    display: flex;
+    justify-self: center;
+}
+
+.input-username {
+    padding: 0px 44%;
+}
+.input-password {
+    padding: 0px 46%;
+}
+
+.input-focus {
+    padding: 0px 10px;
+}
+
+
+
+.input-span {
+    display: block;
+    content: ' ';
+    position: absolute;
+    bottom: 5px;
+    height: 5px;
+    left: 0;
+    right: 0;
+    background-color: rgba(66, 185, 131, .2);
+    transform: scaleX(.1);
+    transition: all .3s ease;
+}
+.input-span-focus {
+    bottom: 2px;
+    height: 2px;
+    background-color: rgba(66, 185, 131, .3);
+    transform: scaleX(1);
+}
+
+
+.button {
+    height: 35px;
+    width: 120px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgba(66, 185, 131, .9);
+    background-color: rgba(66, 185, 131, .7);
+    line-height: 35px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.button:hover {
+    transform: translate(0, -5px);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .3);
+    background-color: rgba(66, 185, 131, 1);
+}
+
+/* basic components, used for layout and animation  --end */
+
+
+
+/* login components  --start */
+.login {
+   
+}
+/* login components  --end */
+
+
+/* sign components  --start */
+.sign {
+    
+}
+/* sign components  --end */

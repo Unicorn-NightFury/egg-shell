@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Egg Shell</title>
+    <link rel="stylesheet" href="./loading.css">
 </head>
 <body>
 
+    
+    <div id="loading">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-        window.onload = loginState;
 
+    <script>
         function loginState() {
             console.log("ok")
             axios.get('/client/data.json')
@@ -26,9 +36,7 @@
                 }
             })
         }
-
-
-        
+        setTimeout(loginState, 3000)
     </script>
 </body>
 </html>

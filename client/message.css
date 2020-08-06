@@ -1,0 +1,46 @@
+
+.alert-box {
+    min-height: 20px;
+    width: 150px;
+    background-color: #fff2f0;
+    padding: 5px 5px;
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    border: 1px solid #ffccc7;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: all .4s ease;
+
+}
+.show-alert {
+    top: 20px;
+    opacity: 1;
+}
+
+.eggalerterror {
+    color: red;
+}
+
+.icon-box {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.message-box {
+    width: 80%;
+    float: left;
+}
+
+.message-type {
+    font-weight: 400; 
+    font-size: 14px;
+}
+.message-context {
+    font-weight: 300;
+    font-size: 12px;
+    color: #777;
+}

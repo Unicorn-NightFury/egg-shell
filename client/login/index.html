@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1991373_odtmtpqp0b.css">
+    <link rel="stylesheet" href="../message.css">
+    <link rel="stylesheet" href="../loading.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
+    <div class="alert-box">
+        <div class="icon-box">
+            <i class="iconfont eggalerterror"></i>
+        </div>
+        <div class="message-box">
+            <span class="message-type">错误:</span>
+            <br>
+            <span class="message-context">用户名或密码不能为空</span>
+        </div>
+    </div>
+
+    <div id="loading">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    
+
     <div class="container">
         <!-- components -->
         <div class="form">
@@ -22,13 +49,13 @@
                 <div class="login form-item">
                     <div class="form-input-box">
                         <div class="form-input">
-                            <input type="text" placeholder="用户名" class="input input-username">
+                            <input type="text" placeholder="用户名" class="input input-username login-username">
                             <span class="input-span"></span>
                         </div>
                     </div>
                     <div class="form-input-box">
                         <div class="form-input">
-                            <input type="password" placeholder="密码" class="input input-password" >
+                            <input type="password" placeholder="密码" class="input input-password login-password" >
                             <span class="input-span"></span>
                         </div>
                     </div>
@@ -41,24 +68,25 @@
                 <div class="sign form-item">
                     <div class="form-input-box">
                         <div class="form-input">
-                            <input type="text" placeholder="用户名" class="input input-username">
+                            <input type="text" placeholder="用户名" class="input input-username sign-username">
                             <span class="input-span"></span>
                         </div>
                     </div>
                     <div class="form-input-box">
                         <div class="form-input">
-                            <input type="password" placeholder="密码" class="input input-password" >
+                            <input type="password" placeholder="密码" class="input input-password sign-password" >
                             <span class="input-span"></span>
                         </div>
                     </div>
-                    <div class="button login-button">
-                        <span>&nbsp;登录</span>
+                    <div class="button sign-button">
+                        <span>&nbsp;注册</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="./script/index.js"></script>
 </body>

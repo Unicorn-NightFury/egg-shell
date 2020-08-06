@@ -40,7 +40,7 @@ const handleInputFocus = () => {
 
 const handleInputBlur = () => {
     $('.input').blur(function() {
-        const val = $(this).val();
+        const val = $(this).val()
         if (!val) {
             $(this).removeClass('input-focus')
             $(this).next().removeClass('input-span-focus')
@@ -48,10 +48,48 @@ const handleInputBlur = () => {
     })
 }
 
+const loginRequest = (username, password) => {
+    $("#loading").show();
+    setTimeout(() => {
+        axios.post('/api/login', {
+            username,
+            password
+        })
+        .then(() => {
+            $("#loading").hide()
+        })
+        .catch(() => {
+            $("#loading").hide()
+        })
+    }, 3000)
+}
+const handleLogin = () => {
+    let username,
+        password
+    $('.login-button').click(() => {
+        username = $('.login-username').val()
+        password = $('.login-password').val()
+        if (username && password) {
+            loginRequest(username, password)
+        } else {
+            $('.alert-box').addClass('show-alert')
+            setTimeout(function() {
+                $('.alert-box').removeClass('show-alert')
+            }, 2000)
+        }
+    }) 
+
+}
+
+
 
 ((window, document) => {
+    window,onload = function() {
+        $("#loading").hide()
+    }
     handleChoose();
     handleChooseAnimate();
     handleInputFocus();
     handleInputBlur();
+    handleLogin();
 })(window, document)
